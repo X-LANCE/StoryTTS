@@ -1,0 +1,251 @@
+<head>
+    <meta charset="utf-8">
+    <title>Audio Samples</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+	<style>
+  		audio {
+    	width: 256px; /* 根据需要调整宽度值 */
+ 	 	}
+	</style>
+	<style>
+        img {
+            max-width: 100%; /* 图片的最大宽度为父元素的100% */
+            max-height: 100vh; /* 图片的最大高度为视窗高度的100% */
+            display: block; /* 使图片垂直居中 */
+            margin: 0 auto; /* 水平居中 */
+        }
+    </style>
+</head>
+
+<!--<link href="./audio/dist/css/bootstrap.min.css" rel="stylesheet">-->
+<body>
+  <div class="container">
+    <div class="jumbotron mt-3">
+      <h2>StoryTTS: A Highly Expressive Text-to-Speech Dataset with Rich Textual Expressiveness Annotations</h2>
+<!--      <a class="btn btn-lg btn-primary" href="../components/navbar/" role="button">View navbar docs »</a>-->
+    </div>
+	
+	<table class="table">
+	<h5><strong>Abstract</strong></h5>
+	<tr>While the acoustic expressiveness has long been studied in expressive text-to-speech (ETTS), the inherent expressiveness in text lacks sufficient attention, especially for ETTS of artistic works. In this paper, we introduce StoryTTS, a highly expressive TTS dataset that contains rich expressiveness both in acoustic and textual perspective, from the recording of a Mandarin storytelling show. A systematic and comprehensive labeling framework is proposed for textual expressiveness. We analyze and define text expressiveness in StoryTTS to include five distinct dimensions through linguistics, rhetoric, etc.
+Then we employ a large language model and prompt it with a few manual annotation examples for batch annotation.The resulting corpus contains 61 hours of consecutive and highly prosodic speech equipped with accurate text transcriptions and rich textual expressiveness annotations. Therefore, StoryTTS can aid future ETTS research to fully mine the abundant intrinsic textual features.Experiments are conducted to validate that TTS models can generate speech with improved expressiveness when integrating with the annotated textual labels in StoryTTS. </tr>
+    <!-- <h3>Part I: Cross-lingual Synthesis</h3> -->
+	</table>
+
+	<h5>This page is the demo of audio samples for our paper.</h5>
+	<br>
+
+	<h2>Contents</h2>
+	<ul>
+	  <li><a href="#sec1">Part I: Speech Synthesis Expressiveness Comparison</a>
+	  </li>
+	  <li><a href="#sec2">Part II: Case Study</a>
+	</ul>	
+	<br>
+	<a id="sec1"></a>
+	<h3>Part I: Speech synthesis expressiveness comparison</h3>
+	<br>
+	<table class="table">
+			<!-- <h6>Spanish text + English male speaker(1027)</h5> -->
+			<!-- <tr><td scope="col" colspan="4"><strong>Chinese Text: </strong>“东方大人,你这是什么意思?” “什么意思?你认识！这是皇上赐给我的宝剑,我随时可以要你的命!”</th></tr> -->
+			<h5>Chinese Text: </strong>这郭三可不干了，“皇上，您听他可骂人哪！”<h5>
+			<tr>
+				<td align="center">GT(Reconstructed)</td>
+				<td align="center">Baseline</td>
+				<td align="center">+ Sentence Pattern</td>
+				<td align="center">+ Scene</td>
+			</tr>
+			<tr>
+				<td><audio src="audio/gt/LianLiru-ZSDFS-episode131-seg167.wav" controls=""></audio></td>
+				<td><audio src="audio/bs/LianLiru-ZSDFS-episode131-seg167.wav" controls=""></audio></td>
+				<td><audio src="audio/js/LianLiru-ZSDFS-episode131-seg167.wav" controls=""></audio></td>
+				<td><audio src="audio/cj/LianLiru-ZSDFS-episode131-seg167.wav" controls=""></audio></td>
+			</tr>
+			<tr>
+				<td align="center">+ Rhetoric Device</td>
+				<td align="center">+ Emotion Color</td>
+				<td align="center">+ Imitated Character</td>
+				<td align="center"><strong>+ALL</strong></td>
+			</tr>
+			<tr>
+				<td><audio src="audio/xc/LianLiru-ZSDFS-episode131-seg167.wav" controls=""></audio></td>
+				<td><audio src="audio/emo/LianLiru-ZSDFS-episode131-seg167.wav" controls=""></audio></td>
+				<td><audio src="audio/je/LianLiru-ZSDFS-episode131-seg167.wav" controls=""></audio></td>
+				<td><audio src="audio/all/LianLiru-ZSDFS-episode131-seg167.wav" controls=""></audio></td>
+			</tr>
+		</table>
+
+	<table class="table">
+			<!-- <h6>Spanish text + English male speaker(1027)</h5> -->
+			<!-- <tr><td scope="col" colspan="4"><strong>Chinese Text: </strong>这时候东方蟹在旁边也学着杨得道的话：“爹爹，当心呐！”</th></tr> -->
+			<h5>Chinese Text: 这时候东方蟹在旁边也学着杨得道的话：“爹爹，当心呐！”</h5>
+			<tr>
+				<td align="center">GT(Reconstructed)</td>
+				<td align="center">Baseline</td>
+				<td align="center">+ Sentence Pattern</td>
+				<td align="center">+ Scene</td>
+			</tr>
+			<tr>
+				<td><audio src="audio/gt/LianLiru-ZSDFS-episode129-seg134.wav" controls=""></audio></td>
+				<td><audio src="audio/bs/LianLiru-ZSDFS-episode129-seg134.wav" controls=""></audio></td>
+				<td><audio src="audio/js/LianLiru-ZSDFS-episode129-seg134.wav" controls=""></audio></td>
+				<td><audio src="audio/cj/LianLiru-ZSDFS-episode129-seg134.wav" controls=""></audio></td>
+			</tr>
+			<tr>
+				<td align="center">+ Rhetoric Device</td>
+				<td align="center">+ Emotion Color</td>
+				<td align="center">+ Imitated Character</td>
+				<td align="center"><strong>+ALL</strong></td>
+			</tr>
+			<tr>
+				<td><audio src="audio/xc/LianLiru-ZSDFS-episode129-seg134.wav" controls=""></audio></td>
+				<td><audio src="audio/emo/LianLiru-ZSDFS-episode129-seg134.wav" controls=""></audio></td>
+				<td><audio src="audio/je/LianLiru-ZSDFS-episode129-seg134.wav" controls=""></audio></td>
+				<td><audio src="audio/all/LianLiru-ZSDFS-episode129-seg134.wav" controls=""></audio></td>
+			</tr>
+		</table>
+	<table class="table">
+			<!-- <h6>Spanish text + English male speaker(1027)</h5> -->
+			<!-- <tr><td scope="col" colspan="4"><strong>Chinese Text: </strong>“东方大人,你这是什么意思?” “什么意思?你认识！这是皇上赐给我的宝剑,我随时可以要你的命!”</th></tr> -->
+			<h5>Chinese Text: </strong>“东方大人，你这是什么意思？” “什么意思？你认识！这是皇上赐给我的宝剑，我随时可以要你的命！”<h5>
+			<tr>
+				<td align="center">GT(Reconstructed)</td>
+				<td align="center">Baseline</td>
+				<td align="center">+ Sentence Pattern</td>
+				<td align="center">+ Scene</td>
+			</tr>
+			<tr>
+				<td><audio src="audio/gt/LianLiru-ZSDFS-episode129-seg205.wav" controls=""></audio></td>
+				<td><audio src="audio/bs/LianLiru-ZSDFS-episode129-seg205.wav" controls=""></audio></td>
+				<td><audio src="audio/js/LianLiru-ZSDFS-episode129-seg205.wav" controls=""></audio></td>
+				<td><audio src="audio/cj/LianLiru-ZSDFS-episode129-seg205.wav" controls=""></audio></td>
+			</tr>
+			<tr>
+				<td align="center">+ Rhetoric Device</td>
+				<td align="center">+ Emotion Color</td>
+				<td align="center">+ Imitated Character</td>
+				<td align="center"><strong>+ALL</strong></td>
+			</tr>
+			<tr>
+				<td><audio src="audio/xc/LianLiru-ZSDFS-episode129-seg205.wav" controls=""></audio></td>
+				<td><audio src="audio/emo/LianLiru-ZSDFS-episode129-seg205.wav" controls=""></audio></td>
+				<td><audio src="audio/je/LianLiru-ZSDFS-episode129-seg205.wav" controls=""></audio></td>
+				<td><audio src="audio/all/LianLiru-ZSDFS-episode129-seg205.wav" controls=""></audio></td>
+			</tr>
+		</table>
+	<table class="table">
+			<!-- <h6>Spanish text + English male speaker(1027)</h5> -->
+			<!-- <tr><td scope="col" colspan="4"><strong>Chinese Text: </strong>“东方大人,你这是什么意思?” “什么意思?你认识！这是皇上赐给我的宝剑,我随时可以要你的命!”</th></tr> -->
+			<h5>Chinese Text: </strong>武帝这时候传话了：“得意呀。” “奴才在！” “请东方朔！”" <h5>
+			<tr>
+				<td align="center">GT(Reconstructed)</td>
+				<td align="center">Baseline</td>
+				<td align="center">+ Sentence Pattern</td>
+				<td align="center">+ Scene</td>
+			</tr>
+			<tr>
+				<td><audio src="audio/gt/LianLiru-ZSDFS-episode131-seg143.wav" controls=""></audio></td>
+				<td><audio src="audio/bs/LianLiru-ZSDFS-episode131-seg143.wav" controls=""></audio></td>
+				<td><audio src="audio/js/LianLiru-ZSDFS-episode131-seg143.wav" controls=""></audio></td>
+				<td><audio src="audio/cj/LianLiru-ZSDFS-episode131-seg143.wav" controls=""></audio></td>
+			</tr>
+			<tr>
+				<td align="center">+ Rhetoric Device</td>
+				<td align="center">+ Emotion Color</td>
+				<td align="center">+ Imitated Character</td>
+				<td align="center"><strong>+ALL</strong></td>
+			</tr>
+			<tr>
+				<td><audio src="audio/xc/LianLiru-ZSDFS-episode131-seg143.wav" controls=""></audio></td>
+				<td><audio src="audio/emo/LianLiru-ZSDFS-episode131-seg143.wav" controls=""></audio></td>
+				<td><audio src="audio/je/LianLiru-ZSDFS-episode131-seg143.wav" controls=""></audio></td>
+				<td><audio src="audio/all/LianLiru-ZSDFS-episode131-seg143.wav" controls=""></audio></td>
+			</tr>
+		</table>
+	<table class="table">
+			<!-- <h6>Spanish text + English male speaker(1027)</h5> -->
+			<!-- <tr><td scope="col" colspan="4"><strong>Chinese Text: </strong>“东方大人,你这是什么意思?” “什么意思?你认识！这是皇上赐给我的宝剑,我随时可以要你的命!”</th></tr> -->
+			<h5>Chinese Text: </strong>“皇上我求求您了我可不跟他玩？” “怎么了，难道说东方朔会把你吃了吗？”<h5>
+			<tr>
+				<td align="center">GT(Reconstructed)</td>
+				<td align="center">Baseline</td>
+				<td align="center">+ Sentence Pattern</td>
+				<td align="center">+ Scene</td>
+			</tr>
+			<tr>
+				<td><audio src="audio/gt/LianLiru-ZSDFS-episode131-seg145.wav" controls=""></audio></td>
+				<td><audio src="audio/bs/LianLiru-ZSDFS-episode131-seg145.wav" controls=""></audio></td>
+				<td><audio src="audio/js/LianLiru-ZSDFS-episode131-seg145.wav" controls=""></audio></td>
+				<td><audio src="audio/cj/LianLiru-ZSDFS-episode131-seg145.wav" controls=""></audio></td>
+			</tr>
+			<tr>
+				<td align="center">+ Rhetoric Device</td>
+				<td align="center">+ Emotion Color</td>
+				<td align="center">+ Imitated Character</td>
+				<td align="center"><strong>+ALL</strong></td>
+			</tr>
+			<tr>
+				<td><audio src="audio/xc/LianLiru-ZSDFS-episode131-seg145.wav" controls=""></audio></td>
+				<td><audio src="audio/emo/LianLiru-ZSDFS-episode131-seg145.wav" controls=""></audio></td>
+				<td><audio src="audio/je/LianLiru-ZSDFS-episode131-seg145.wav" controls=""></audio></td>
+				<td><audio src="audio/all/LianLiru-ZSDFS-episode131-seg145.wav" controls=""></audio></td>
+			</tr>
+		</table>
+	<a id="sec2"></a>
+	<h3>Part II: Case Study</h3>
+	<br>
+	<table class="table">
+			<!-- <h6>Spanish text + English male speaker(1027)</h5> -->
+			<!-- <tr><td scope="col" colspan="4"><strong>Chinese Text: </strong>“东方大人,你这是什么意思?” “什么意思?你认识！这是皇上赐给我的宝剑,我随时可以要你的命!”</th></tr> -->
+			<h5>Chinese Text: </strong>“皇上，您说吧，奴才我这等着呢。” <h5>
+			<tr>
+				<td align="center">GT(Reconstructed)</td>
+				<td align="center">Baseline</td>
+				<td align="center"><strong>+ALL</strong></td>
+			</tr>
+			<tr>
+				<td><audio src="audio/gt/LianLiru-ZSDFS-episode131-seg112.wav" controls=""></audio></td>
+				<td><audio src="audio/bs/LianLiru-ZSDFS-episode131-seg112.wav" controls=""></audio></td>
+				<td><audio src="audio/all/LianLiru-ZSDFS-episode131-seg112.wav" controls=""></audio></td>
+			</tr>
+		</table>
+			<img src="./image/case1.png" >
+			<br>
+			<br>
+	<table class="table">
+			<h5>Chinese Text: </strong>“金子你得给我。” “不行，我就是不给！” <h5>
+			<tr>
+				<td align="center">GT(Reconstructed)</td>
+				<td align="center">Baseline</td>
+				<td align="center"><strong>+ALL</strong></td>
+			</tr>
+			<tr>
+				<td><audio src="audio/gt/LianLiru-ZSDFS-episode131-seg203.wav" controls=""></audio></td>
+				<td><audio src="audio/bs/LianLiru-ZSDFS-episode131-seg203.wav" controls=""></audio></td>
+				<td><audio src="audio/all/LianLiru-ZSDFS-episode131-seg203.wav" controls=""></audio></td>
+			</tr>
+	</table>
+			<img src="./image/case2.png" >
+
+  </div>
+  
+</body>

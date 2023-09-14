@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="utf-8">
     <title>Audio Samples</title>
@@ -21,83 +23,283 @@
         }
       }
     </style>
-	<style>
-  		audio {
-    	width: 256px; /* 根据需要调整宽度值 */
- 	 	}
-	</style>
-	<style>
-        img {
-            max-width: 100%; /* 图片的最大宽度为父元素的100% */
-            max-height: 100vh; /* 图片的最大高度为视窗高度的100% */
-            display: block; /* 使图片垂直居中 */
-            margin: 0 auto; /* 水平居中 */
-        }
+    <style>
+      audio {
+        width: 100%;
+      }
     </style>
-</head>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        border: 2px solid #0077b6; /* 边框颜色 */
+      }
 
-<!--<link href="./audio/dist/css/bootstrap.min.css" rel="stylesheet">-->
-<body>
-  <div class="container">
-    <div class="jumbotron mt-3">
-      <h2>StoryTTS: A Highly Expressive Text-to-Speech Dataset with Rich Textual Expressiveness Annotations</h2>
-<!--      <a class="btn btn-lg btn-primary" href="../components/navbar/" role="button">View navbar docs »</a>-->
-    </div>
-	
-	<table class="table">
-	<h5><strong>Abstract</strong></h5>
-	<tr>While the acoustic expressiveness has long been studied in expressive text-to-speech (ETTS), the inherent expressiveness in text lacks sufficient attention, especially for ETTS of artistic works. In this paper, we introduce StoryTTS, a highly expressive TTS dataset that contains rich expressiveness both in acoustic and textual perspective, from the recording of a Mandarin storytelling show. A systematic and comprehensive labeling framework is proposed for textual expressiveness. We analyze and define text expressiveness in StoryTTS to include five distinct dimensions through linguistics, rhetoric, etc.
-Then we employ a large language model and prompt it with a few manual annotation examples for batch annotation.The resulting corpus contains 61 hours of consecutive and highly prosodic speech equipped with accurate text transcriptions and rich textual expressiveness annotations. Therefore, StoryTTS can aid future ETTS research to fully mine the abundant intrinsic textual features.Experiments are conducted to validate that TTS models can generate speech with improved expressiveness when integrating with the annotated textual labels in StoryTTS. </tr>
-    <!-- <h3>Part I: Cross-lingual Synthesis</h3> -->
-	</table>
+      th, td {
+        border: 2px solid #0077b6; /* 边框颜色 */
+        padding: 10px;
+        text-align: left;
+      }
 
-	<h5>This page is the demo of audio samples for our paper.</h5>
-	<br>
+      th {
+        background-color: #f0f0f0; /* 表头背景颜色 */
+        color: #0077b6; /* 表头文字颜色 */
+        font-weight: bold;
+      }
 
-	<h2>Contents</h2>
-	<ul>
-	  <li><a href="#sec1">Part I: Speech Synthesis Expressiveness Comparison</a>
-	  </li>
-	  <li><a href="#sec2">Part II: Case Study</a>
-	</ul>	
-	<br>
-	<a id="sec1"></a>
-	<h3>Part I: Speech synthesis expressiveness comparison</h3>
-	<br>
-	<table class="table">
-			<!-- <h6>Spanish text + English male speaker(1027)</h5> -->
-			<!-- <tr><td scope="col" colspan="4"><strong>Chinese Text: </strong>“东方大人,你这是什么意思?” “什么意思?你认识！这是皇上赐给我的宝剑,我随时可以要你的命!”</th></tr> -->
-			<h5>Chinese Text: </strong>这郭三可不干了，“皇上，您听他可骂人哪！”<h5>
-			<tr>
-				<td align="center">GT(Reconstructed)</td>
-				<td align="center">Baseline</td>
-				<td align="center">+ Sentence Pattern</td>
-				<td align="center">+ Scene</td>
-			</tr>
-			<tr>
-				<td><audio src="audio/gt/LianLiru-ZSDFS-episode131-seg167.wav" controls=""></audio></td>
-				<td><audio src="audio/bs/LianLiru-ZSDFS-episode131-seg167.wav" controls=""></audio></td>
-				<td><audio src="audio/js/LianLiru-ZSDFS-episode131-seg167.wav" controls=""></audio></td>
-				<td><audio src="audio/cj/LianLiru-ZSDFS-episode131-seg167.wav" controls=""></audio></td>
-			</tr>
-			<tr>
-				<td align="center">+ Rhetoric Device</td>
-				<td align="center">+ Emotion Color</td>
-				<td align="center">+ Imitated Character</td>
-				<td align="center"><strong>+ALL</strong></td>
-			</tr>
-			<tr>
-				<td><audio src="audio/xc/LianLiru-ZSDFS-episode131-seg167.wav" controls=""></audio></td>
-				<td><audio src="audio/emo/LianLiru-ZSDFS-episode131-seg167.wav" controls=""></audio></td>
-				<td><audio src="audio/je/LianLiru-ZSDFS-episode131-seg167.wav" controls=""></audio></td>
-				<td><audio src="audio/all/LianLiru-ZSDFS-episode131-seg167.wav" controls=""></audio></td>
-			</tr>
-		</table>
+      td {
+        background-color: #f8f8f8; /* 单元格背景颜色 */
+        color: #333; /* 单元格文字颜色 */
+      }
 
-	<table class="table">
-			<!-- <h6>Spanish text + English male speaker(1027)</h5> -->
-			<!-- <tr><td scope="col" colspan="4"><strong>Chinese Text: </strong>这时候东方蟹在旁边也学着杨得道的话：“爹爹，当心呐！”</th></tr> -->
-			<h5>Chinese Text: 这时候东方蟹在旁边也学着杨得道的话：“爹爹，当心呐！”</h5>
+      audio {
+        width: 100%;
+      }
+
+      /* Part II 表格样式 */
+      .part2-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .part2-table th {
+        width: 25%; /* 设置每个表头单元格的宽度为25% */
+      }
+      .part2-table td {
+        border: 2px solid #0077b6;
+        padding: 10px;
+        text-align: center;
+        background-color: #f8f8f8;
+        color: #333;
+      }
+    </style>
+    <style>
+      /* 调整行间距 */
+      .container {
+        line-height: 1.6;
+      }
+
+      /* 限制图片大小 */
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron mt-3">
+        <h2>StoryTTS: A Highly Expressive Text-to-Speech Dataset with Rich Textual Expressiveness Annotations</h2>
+      </div>
+
+      <table class="table">
+        <h5><strong>Abstract</strong></h5>
+        <tr>
+          <td>
+            While the acoustic expressiveness has long been studied in expressive text-to-speech (ETTS), the inherent expressiveness in text lacks sufficient attention, especially for ETTS of artistic works. In this paper, we introduce StoryTTS, a highly expressive TTS dataset that contains rich expressiveness both in acoustic and textual perspective, from the recording of a Mandarin storytelling show. A systematic and comprehensive labeling framework is proposed for textual expressiveness. We analyze and define text expressiveness in StoryTTS to include five distinct dimensions through linguistics, rhetoric, etc. Then we employ a large language model and prompt it with a few manual annotation examples for batch annotation. The resulting corpus contains 61 hours of consecutive and highly prosodic speech equipped with accurate text transcriptions and rich textual expressiveness annotations. Therefore, StoryTTS can aid future ETTS research to fully mine the abundant intrinsic textual features. Experiments are conducted to validate that TTS models can generate speech with improved expressiveness when integrating with the annotated textual labels in StoryTTS.
+          </td>
+        </tr>
+      </table>
+
+      <h5>This page is the demo of audio samples for our paper.</h5>
+      <br>
+
+      <h2>Contents</h2>
+      <ul>
+        <li><a href="#sec1">Part I: The StoryTTS dataset</a></li>
+        <li><a href="#sec2">Part II: Speech Synthesis Expressiveness Comparison</a></li>
+        <li><a href="#sec3">Part III: Case Study</a></li>
+      </ul>
+
+      <br>
+      <a id="sec1"></a>
+      <h3>Part I: The StoryTTS dataset</h3>
+      <br>
+      <table border="1">
+        <tr>
+          <td style="font-size: 18px; text-align: center;"><strong>Chinese text</strong></td>
+          <td colspan="5" style="font-size: 20px; text-align: left;">公孙弘冷笑了一声，心说：“还起得好呢，这回可让我们儒家找出破绽来了！”</td>
+        </tr>
+        <tr>
+          <td style="font-size: 18px; text-align: center;"><strong>LLM Annotations</strong></td>
+          <td style="font-size: 16px; text-align: center;"><strong>Sentence Pattern</strong></td>
+          <td style="font-size: 16px; text-align: center;"><strong>Scene</strong></td>
+          <td style="font-size: 16px; text-align: center;"><strong>Rhetorical Device</strong></td>
+          <td style="font-size: 16px; text-align: center;"><strong>Emotional Color</strong></td>
+          <td style="font-size: 16px; text-align: center;"><strong>Imitated Character</strong></td>
+        </tr>
+        <tr>
+          <td></td>          
+          <td style="font-size: 16px; text-align: center;">Declarative sentence</td>
+          <td style="font-size: 16px; text-align: center;">Inner monologue</td>
+          <td style="font-size: 16px; text-align: center;">None</td>
+          <td style="font-size: 16px; text-align: center;">Pride and ridicule</td>
+          <td style="font-size: 16px; text-align: center;">Gongsun Hong (middle-aged men)</td>
+        </tr>
+        <tr>
+          <td style="font-size: 18px; text-align: center;"><strong>GT Audio</strong></td>
+          <td colspan="5"><center><audio src="./audio/llr/LianLiru-ZSDFS-episode006-seg121.wav" controls=""></audio></center></td>
+        </tr>
+      </table>
+
+      <br>
+      <table border="1">
+        <tr>
+          <td style="font-size: 18px; text-align: center;"><strong>Chinese text</strong></td>
+          <td colspan="5" style="font-size: 20px; text-align: left;">“难道你是平原郡门下的鸡鸣狗盗之徒吗？啊？”</td>
+        </tr>
+        <tr>
+          <td style="font-size: 18px; text-align: center;"><strong>LLM Annotations</strong></td>
+          <td style="font-size: 16px; text-align: center;"><strong>Sentence Pattern</strong></td>
+          <td style="font-size: 16px; text-align: center;"><strong>Scene</strong></td>
+          <td style="font-size: 16px; text-align: center;"><strong>Rhetorical Device</strong></td>
+          <td style="font-size: 16px; text-align: center;"><strong>Emotional Color</strong></td>
+          <td style="font-size: 16px; text-align: center;"><strong>Imitated Character</strong></td>
+        </tr>
+        <tr>
+          <td></td>          
+          <td style="font-size: 16px; text-align: center;">Interrogative sentence</td>
+          <td style="font-size: 16px; text-align: center;">Role-playing</td>
+          <td style="font-size: 16px; text-align: center;">Rhetorical question</td>
+          <td style="font-size: 16px; text-align: center;">Mockery and questioning</td>
+          <td style="font-size: 16px; text-align: center;">Dongfang Shuo (protagonist)</td>
+        </tr>
+        <tr>
+          <td style="font-size: 18px; text-align: center;"><strong>GT Audio</strong></td>
+          <td colspan="5"><center><audio src="./audio/llr/LianLiru-ZSDFS-episode006-seg145.wav" controls=""></audio></center></td>
+        </tr>
+      </table>
+
+      <br>
+      <table border="1">
+        <tr>
+          <td style="font-size: 18px; text-align: center;"><strong>Chinese text</strong></td>
+          <td colspan="5" style="font-size: 20px; text-align: left;">“多好看呐!这大刀一举,咔嚓一下,这人头就掉下来了!”</td>
+        </tr>
+        <tr>
+          <td style="font-size: 18px; text-align: center;"><strong>LLM Annotations</strong></td>
+          <td style="font-size: 16px; text-align: center;"><strong>Sentence Pattern</strong></td>
+          <td style="font-size: 16px; text-align: center;"><strong>Scene</strong></td>
+          <td style="font-size: 16px; text-align: center;"><strong>Rhetorical Device</strong></td>
+          <td style="font-size: 16px; text-align: center;"><strong>Emotional Color</strong></td>
+          <td style="font-size: 16px; text-align: center;"><strong>Imitated Character</strong></td>
+        </tr>
+        <tr>
+          <td></td>          
+          <td style="font-size: 16px; text-align: center;">Exclamatory sentence</td>
+          <td style="font-size: 16px; text-align: center;">Role-playing</td>
+          <td style="font-size: 16px; text-align: center;">Onomatopoeia</td>
+          <td style="font-size: 16px; text-align: center;">Excitement and curiosity</td>
+          <td style="font-size: 16px; text-align: center;">Huo Qubing (Young men)</td>
+        </tr>
+        <tr>
+          <td style="font-size: 18px; text-align: center;"><strong>GT Audio</strong></td>
+          <td colspan="5"><center><audio src="./audio/llr/LianLiru-ZSDFS-episode067-seg211.wav" controls=""></audio></center></td>
+        </tr>
+      </table>
+
+      <br>
+      <table border="1">
+        <tr>
+          <td style="font-size: 18px; text-align: center;"><strong>Chinese text</strong></td>
+          <td colspan="5" style="font-size: 20px; text-align: left;">“去吧,快去更衣,朕和公主还要看看府邸修得怎么样呢。”。</td>
+        </tr>
+        <tr>
+          <td style="font-size: 18px; text-align: center;"><strong>LLM Annotations</strong></td>
+          <td style="font-size: 16px; text-align: center;"><strong>Sentence Pattern</strong></td>
+          <td style="font-size: 16px; text-align: center;"><strong>Scene</strong></td>
+          <td style="font-size: 16px; text-align: center;"><strong>Rhetorical Device</strong></td>
+          <td style="font-size: 16px; text-align: center;"><strong>Emotional Color</strong></td>
+          <td style="font-size: 16px; text-align: center;"><strong>Imitated Character</strong></td>
+        </tr>
+        <tr>
+          <td></td>          
+          <td style="font-size: 16px; text-align: center;">Imperative sentence</td>
+          <td style="font-size: 16px; text-align: center;">Role-playing</td>
+          <td style="font-size: 16px; text-align: center;">None</td>
+          <td style="font-size: 16px; text-align: center;">Command and care</td>
+          <td style="font-size: 16px; text-align: center;">Han Wudi (Emperor)</td>
+        </tr>
+        <tr>
+          <td style="font-size: 18px; text-align: center;"><strong>GT Audio</strong></td>
+          <td colspan="5"><center><audio src="./audio/llr/LianLiru-ZSDFS-episode031-seg098.wav" controls=""></audio></center></td>
+        </tr>
+      </table>
+
+
+      <br>
+      <table border="1">
+        <tr>
+          <td style="font-size: 18px; text-align: center;"><strong>Chinese text</strong></td>
+          <td colspan="5" style="font-size: 20px; text-align: left;">上回书说到大侠郭解,迁居茂陵。</td>
+        </tr>
+        <tr>
+          <td style="font-size: 18px; text-align: center;"><strong>LLM Annotations</strong></td>
+          <td style="font-size: 16px; text-align: center;"><strong>Sentence Pattern</strong></td>
+          <td style="font-size: 16px; text-align: center;"><strong>Scene</strong></td>
+          <td style="font-size: 16px; text-align: center;"><strong>Rhetorical Device</strong></td>
+          <td style="font-size: 16px; text-align: center;"><strong>Emotional Color</strong></td>
+          <td style="font-size: 16px; text-align: center;"><strong>Imitated Character</strong></td>
+        </tr>
+        <tr>
+          <td></td>          
+          <td style="font-size: 16px; text-align: center;">Declarative sentence</td>
+          <td style="font-size: 16px; text-align: center;">Aside</td>
+          <td style="font-size: 16px; text-align: center;">None</td>
+          <td style="font-size: 16px; text-align: center;">Emotionless Color</td>
+          <td style="font-size: 16px; text-align: center;">Aside (Aside)</td>
+        </tr>
+        <tr>
+          <td style="font-size: 18px; text-align: center;"><strong>GT Audio</strong></td>
+          <td colspan="5"><center><audio src="./audio/llr/LianLiru-ZSDFS-episode097-seg001.wav" controls=""></audio></center></td>
+        </tr>
+      </table>
+
+      <br>
+      <a id="sec2"></a>
+      <h3>Part II: Speech synthesis expressiveness comparison</h3>
+      <br>
+      <table class="part2-table" style="table-layout: fixed; width: 100%;">
+        <col width="25%" />
+        <col width="25%" />
+        <col width="25%" />
+        <col width="25%" />
+        <tr>
+            <td colspan="4" style="font-size: 20px; text-align: left;" ><strong>Chinese Text:</strong> 这郭三可不干了，“皇上，您听他可骂人哪！”</td>
+        </tr>
+        <tr>
+          <td align="center">GT(Reconstructed)</td>
+          <td align="center">Baseline</td>
+          <td align="center">+ Sentence Pattern</td>
+          <td align="center">+ Scene</td>
+        </tr>
+        <tr>
+          <td><audio src="audio/gt/LianLiru-ZSDFS-episode131-seg167.wav" controls=""></audio></td>
+          <td><audio src="audio/bs/LianLiru-ZSDFS-episode131-seg167.wav" controls=""></audio></td>
+          <td><audio src="audio/js/LianLiru-ZSDFS-episode131-seg167.wav" controls=""></audio></td>
+          <td><audio src="audio/cj/LianLiru-ZSDFS-episode131-seg167.wav" controls=""></audio></td>
+        </tr>
+        <tr>
+          <td align="center">+ Rhetoric Device</td>
+          <td align="center">+ Emotion Color</td>
+          <td align="center">+ Imitated Character</td>
+          <td align="center"><strong>+ALL</strong></td>
+        </tr>
+        <tr>
+          <td><audio src="audio/xc/LianLiru-ZSDFS-episode131-seg167.wav" controls=""></audio></td>
+          <td><audio src="audio/emo/LianLiru-ZSDFS-episode131-seg167.wav" controls=""></audio></td>
+          <td><audio src="audio/je/LianLiru-ZSDFS-episode131-seg167.wav" controls=""></audio></td>
+          <td><audio src="audio/all/LianLiru-ZSDFS-episode131-seg167.wav" controls=""></audio></td>
+        </tr>
+      </table>
+      <br>
+      <table class="part2-table" style="table-layout: fixed; width: 100%;">
+        <col width="25%" /> <!-- 设置每列的宽度为25% -->
+        <col width="25%" />
+        <col width="25%" />
+        <col width="25%" />
+        <tr>
+            <td colspan="4" style="font-size: 20px; text-align: left;" ><strong>Chinese Text:</strong> 这时候东方蟹在旁边也学着杨得道的话：“爹爹，当心呐！”</td>
+        </tr>
 			<tr>
 				<td align="center">GT(Reconstructed)</td>
 				<td align="center">Baseline</td>
@@ -123,11 +325,16 @@ Then we employ a large language model and prompt it with a few manual annotation
 				<td><audio src="audio/all/LianLiru-ZSDFS-episode129-seg134.wav" controls=""></audio></td>
 			</tr>
 		</table>
-	<table class="table">
-			<!-- <h6>Spanish text + English male speaker(1027)</h5> -->
-			<!-- <tr><td scope="col" colspan="4"><strong>Chinese Text: </strong>“东方大人,你这是什么意思?” “什么意思?你认识！这是皇上赐给我的宝剑,我随时可以要你的命!”</th></tr> -->
-			<h5>Chinese Text: </strong>“东方大人，你这是什么意思？” “什么意思？你认识！这是皇上赐给我的宝剑，我随时可以要你的命！”<h5>
-			<tr>
+
+      <table class="part2-table" style="table-layout: fixed; width: 100%;">
+        <col width="25%" /> <!-- 设置每列的宽度为25% -->
+        <col width="25%" />
+        <col width="25%" />
+        <col width="25%" />
+        <tr>
+            <td colspan="4" style="font-size: 20px; text-align: left;" ><strong>Chinese Text:</strong> “东方大人，你这是什么意思？” “什么意思？你认识！这是皇上赐给我的宝剑，我随时可以要你的命！”</td>
+		</tr>	
+            <tr>
 				<td align="center">GT(Reconstructed)</td>
 				<td align="center">Baseline</td>
 				<td align="center">+ Sentence Pattern</td>
@@ -152,10 +359,14 @@ Then we employ a large language model and prompt it with a few manual annotation
 				<td><audio src="audio/all/LianLiru-ZSDFS-episode129-seg205.wav" controls=""></audio></td>
 			</tr>
 		</table>
-	<table class="table">
-			<!-- <h6>Spanish text + English male speaker(1027)</h5> -->
-			<!-- <tr><td scope="col" colspan="4"><strong>Chinese Text: </strong>“东方大人,你这是什么意思?” “什么意思?你认识！这是皇上赐给我的宝剑,我随时可以要你的命!”</th></tr> -->
-			<h5>Chinese Text: </strong>武帝这时候传话了：“得意呀。” “奴才在！” “请东方朔！”" <h5>
+      <table class="part2-table" style="table-layout: fixed; width: 100%;">
+        <col width="25%" /> <!-- 设置每列的宽度为25% -->
+        <col width="25%" />
+        <col width="25%" />
+        <col width="25%" />
+        <tr>
+            <td colspan="4" style="font-size: 20px; text-align: left;" ><strong>Chinese Text:</strong> 武帝这时候传话了：“得意呀。” “奴才在！” “请东方朔！”" </td>
+        </tr>
 			<tr>
 				<td align="center">GT(Reconstructed)</td>
 				<td align="center">Baseline</td>
@@ -181,10 +392,14 @@ Then we employ a large language model and prompt it with a few manual annotation
 				<td><audio src="audio/all/LianLiru-ZSDFS-episode131-seg143.wav" controls=""></audio></td>
 			</tr>
 		</table>
-	<table class="table">
-			<!-- <h6>Spanish text + English male speaker(1027)</h5> -->
-			<!-- <tr><td scope="col" colspan="4"><strong>Chinese Text: </strong>“东方大人,你这是什么意思?” “什么意思?你认识！这是皇上赐给我的宝剑,我随时可以要你的命!”</th></tr> -->
-			<h5>Chinese Text: </strong>“皇上我求求您了我可不跟他玩？” “怎么了，难道说东方朔会把你吃了吗？”<h5>
+      <table class="part2-table" style="table-layout: fixed; width: 100%;">
+        <col width="25%" /> <!-- 设置每列的宽度为25% -->
+        <col width="25%" />
+        <col width="25%" />
+        <col width="25%" />
+        <tr>
+            <td colspan="4" style="font-size: 20px; text-align: left;" ><strong>Chinese Text:</strong> “皇上我求求您了我可不跟他玩？” “怎么了，难道说东方朔会把你吃了吗？”</td>
+        </tr>
 			<tr>
 				<td align="center">GT(Reconstructed)</td>
 				<td align="center">Baseline</td>
@@ -210,42 +425,61 @@ Then we employ a large language model and prompt it with a few manual annotation
 				<td><audio src="audio/all/LianLiru-ZSDFS-episode131-seg145.wav" controls=""></audio></td>
 			</tr>
 		</table>
-	<a id="sec2"></a>
-	<h3>Part II: Case Study</h3>
-	<br>
-	<table class="table">
-			<!-- <h6>Spanish text + English male speaker(1027)</h5> -->
-			<!-- <tr><td scope="col" colspan="4"><strong>Chinese Text: </strong>“东方大人,你这是什么意思?” “什么意思?你认识！这是皇上赐给我的宝剑,我随时可以要你的命!”</th></tr> -->
-			<h5>Chinese Text: </strong>“皇上，您说吧，奴才我这等着呢。” <h5>
-			<tr>
-				<td align="center">GT(Reconstructed)</td>
-				<td align="center">Baseline</td>
-				<td align="center"><strong>+ALL</strong></td>
-			</tr>
-			<tr>
-				<td><audio src="audio/gt/LianLiru-ZSDFS-episode131-seg112.wav" controls=""></audio></td>
-				<td><audio src="audio/bs/LianLiru-ZSDFS-episode131-seg112.wav" controls=""></audio></td>
-				<td><audio src="audio/all/LianLiru-ZSDFS-episode131-seg112.wav" controls=""></audio></td>
-			</tr>
-		</table>
-			<img src="./image/case1.png" >
-			<br>
-			<br>
-	<table class="table">
-			<h5>Chinese Text: </strong>“金子你得给我。” “不行，我就是不给！” <h5>
-			<tr>
-				<td align="center">GT(Reconstructed)</td>
-				<td align="center">Baseline</td>
-				<td align="center"><strong>+ALL</strong></td>
-			</tr>
-			<tr>
-				<td><audio src="audio/gt/LianLiru-ZSDFS-episode131-seg203.wav" controls=""></audio></td>
-				<td><audio src="audio/bs/LianLiru-ZSDFS-episode131-seg203.wav" controls=""></audio></td>
-				<td><audio src="audio/all/LianLiru-ZSDFS-episode131-seg203.wav" controls=""></audio></td>
-			</tr>
-	</table>
-			<img src="./image/case2.png" >
 
-  </div>
-  
-</body>
+      <br>
+      <br>
+      <a id="sec3"></a>
+      <h3>Part III: Case Study</h3>
+      <br>
+      <table class="part2-table" style="table-layout: fixed; width: 100%;">
+        <col width="33.33%" /> <!-- 设置每列的宽度为25% -->
+        <col width="33.33%" />
+        <col width="33.33%" />
+        <tr>
+            <td colspan="3" style="font-size: 20px; text-align: left;" ><strong>Chinese Text:</strong> “皇上，您说吧，奴才我这等着呢。”</td>
+        </tr>
+        <tr>
+          <td align="center">GT(Reconstructed)</td>
+          <td align="center">Baseline</td>
+          <td align="center"><strong>+ALL</strong></td>
+        </tr>
+        <tr>
+          <td><audio src="audio/gt/LianLiru-ZSDFS-episode131-seg112.wav" controls=""></audio></td>
+          <td><audio src="audio/bs/LianLiru-ZSDFS-episode131-seg112.wav" controls=""></audio></td>
+          <td><audio src="audio/all/LianLiru-ZSDFS-episode131-seg112.wav" controls=""></audio></td>
+        </tr>
+      <tr>
+        <td colspan="3">
+            <img src="./image/case1.png" style="width: 100%;" >
+        </td>
+      </tr>
+    </table>     
+      <br>
+      <table class="part2-table" style="table-layout: fixed; width: 100%;">
+        <col width="33.33%" /> <!-- 设置每列的宽度为25% -->
+        <col width="33.33%" />
+        <col width="33.33%" />
+        <tr>
+            <td colspan="3" style="font-size: 20px; text-align: left;" ><strong>Chinese Text:</strong> “金子你得给我。” “不行，我就是不给！”</td>
+        </tr>
+        <tr>
+          <td align="center">GT(Reconstructed)</td>
+          <td align="center">Baseline</td>
+          <td align="center"><strong>+ALL</strong></td>
+        </tr>
+        <tr>
+          <td><audio src="audio/gt/LianLiru-ZSDFS-episode131-seg203.wav" controls=""></audio></td>
+          <td><audio src="audio/bs/LianLiru-ZSDFS-episode131-seg203.wav" controls=""></audio></td>
+          <td><audio src="audio/all/LianLiru-ZSDFS-episode131-seg203.wav" controls=""></audio></td>
+        </tr>
+      <tr>
+        <td colspan="3">
+            <img src="./image/case2.png" style="width: 100%;" >
+        </td>
+      </tr>
+      </table>
+    
+     
+    </div>
+  </body>
+</html>

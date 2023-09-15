@@ -32,37 +32,35 @@
       table {
         border-collapse: collapse;
         width: 100%;
-        border: 2px solid #0077b6; /* 边框颜色 */
+        border: 2px solid #0077b6;
       }
 
       th, td {
-        border: 2px solid #0077b6; /* 边框颜色 */
+        border: 2px solid #0077b6;
         padding: 10px;
         text-align: left;
       }
 
       th {
-        background-color: #f0f0f0; /* 表头背景颜色 */
-        color: #0077b6; /* 表头文字颜色 */
+        background-color: #f0f0f0;
+        color: #0077b6;
         font-weight: bold;
       }
 
       td {
-        background-color: #f8f8f8; /* 单元格背景颜色 */
-        color: #333; /* 单元格文字颜色 */
+        background-color: #f8f8f8;
+        color: #333;
       }
 
       audio {
         width: 100%;
       }
-
-      /* Part II 表格样式 */
       .part2-table {
         width: 100%;
         border-collapse: collapse;
       }
       .part2-table th {
-        width: 25%; /* 设置每个表头单元格的宽度为25% */
+        width: 25%;
       }
       .part2-table td {
         border: 2px solid #0077b6;
@@ -73,12 +71,9 @@
       }
     </style>
     <style>
-      /* 调整行间距 */
       .container {
         line-height: 1.6;
       }
-
-      /* 限制图片大小 */
       img {
         max-width: 100%;
         height: auto;
@@ -88,14 +83,25 @@
   <body>
     <div class="container">
       <div class="jumbotron mt-3">
-        <h2>StoryTTS: A Highly Expressive Text-to-Speech Dataset with Rich Textual Expressiveness Annotations</h2>
+        <center><h2>StoryTTS: A Highly Expressive Text-to-Speech Dataset with Rich Textual Expressiveness Annotations</h2></center>
+                <p class="lead">
+                    <center><i><h6>Sen Liu, Yiwei Guo, Xie Chen, Kai Yu</h6></i></center>
+                </p>
+                <p class="lead">
+                    <center><h5>Shanghai Jiao Tong University, China</h5></center>
+                </p>
+                <p class="lead">
+                    <center><a href="mailto:sen.liu@sjtu.edu.cn">sen.liu@sjtu.edu.cn</a></center>
+                </p>
+                <p class="lead">
+                    <center><h6><a href="https://github.com/GoArsenal/StoryTTS">dataset link</a></h6></center>
+                </p>
       </div>
-
       <table class="table">
         <h5><strong>Abstract</strong></h5>
         <tr>
           <td>
-            While the acoustic expressiveness has long been studied in expressive text-to-speech (ETTS), the inherent expressiveness in text lacks sufficient attention, especially for ETTS of artistic works. In this paper, we introduce StoryTTS, a highly expressive TTS dataset that contains rich expressiveness both in acoustic and textual perspective, from the recording of a Mandarin storytelling show. A systematic and comprehensive labeling framework is proposed for textual expressiveness. We analyze and define text expressiveness in StoryTTS to include five distinct dimensions through linguistics, rhetoric, etc. Then we employ a large language model and prompt it with a few manual annotation examples for batch annotation. The resulting corpus contains 61 hours of consecutive and highly prosodic speech equipped with accurate text transcriptions and rich textual expressiveness annotations. Therefore, StoryTTS can aid future ETTS research to fully mine the abundant intrinsic textual features. Experiments are conducted to validate that TTS models can generate speech with improved expressiveness when integrating with the annotated textual labels in StoryTTS.
+            While acoustic expressiveness has long been studied in expressive text-to-speech (ETTS), the inherent expressiveness in text lacks sufficient attention, especially for ETTS of artistic works. In this paper, we introduce StoryTTS, a highly ETTS dataset that contains rich expressiveness both in acoustic and textual perspective, from the recording of a Mandarin storytelling show. A systematic and comprehensive labeling framework is proposed for textual expressiveness. We analyze and define text expressiveness in StoryTTS to include five distinct dimensions through linguistics, rhetoric, etc. Then we employ a large language model and prompt it with a few manual annotation examples for batch annotation. The resulting corpus contains 61 hours of consecutive and highly prosodic speech equipped with accurate text transcriptions and rich textual expressiveness annotations. Therefore, StoryTTS can aid future ETTS research to fully mine the abundant intrinsic textual and acoustic features. Experiments are conducted to validate that TTS models can generate speech with improved expressiveness when integrating with the annotated textual labels in StoryTTS.
           </td>
         </tr>
       </table>
@@ -161,7 +167,7 @@
           <td style="font-size: 16px; text-align: center;">Role-playing</td>
           <td style="font-size: 16px; text-align: center;">Rhetorical question</td>
           <td style="font-size: 16px; text-align: center;">Mockery and questioning</td>
-          <td style="font-size: 16px; text-align: center;">Dongfang Shuo (protagonist)</td>
+          <td style="font-size: 16px; text-align: center;">Dongfang Shuo (Protagonist 1)</td>
         </tr>
         <tr>
           <td style="font-size: 18px; text-align: center;"><strong>GT Audio</strong></td>
@@ -201,7 +207,7 @@
       <table border="1">
         <tr>
           <td style="font-size: 18px; text-align: center;"><strong>Chinese text</strong></td>
-          <td colspan="5" style="font-size: 20px; text-align: left;">“去吧,快去更衣,朕和公主还要看看府邸修得怎么样呢。”。</td>
+          <td colspan="5" style="font-size: 20px; text-align: left;"> “快坐下,你别逞能了。”</td>
         </tr>
         <tr>
           <td style="font-size: 18px; text-align: center;"><strong>LLM Annotations</strong></td>
@@ -216,12 +222,12 @@
           <td style="font-size: 16px; text-align: center;">Imperative sentence</td>
           <td style="font-size: 16px; text-align: center;">Role-playing</td>
           <td style="font-size: 16px; text-align: center;">None</td>
-          <td style="font-size: 16px; text-align: center;">Command and care</td>
-          <td style="font-size: 16px; text-align: center;">Han Wudi (Emperor)</td>
+          <td style="font-size: 16px; text-align: center;">Worry and blame</td>
+          <td style="font-size: 16px; text-align: center;">Wei Qing (Protagonist 2)</td>
         </tr>
         <tr>
           <td style="font-size: 18px; text-align: center;"><strong>GT Audio</strong></td>
-          <td colspan="5"><center><audio src="./audio/llr/LianLiru-ZSDFS-episode031-seg098.wav" controls=""></audio></center></td>
+          <td colspan="5"><center><audio src="./audio/llr/LianLiru-ZSDFS-episode036-seg052.wav" controls=""></audio></center></td>
         </tr>
       </table>
 

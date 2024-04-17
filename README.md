@@ -1,31 +1,28 @@
-## StoryTTS
+# StoryTTS
 
 > [STORYTTS: A HIGHLY EXPRESSIVE TEXT-TO-SPEECH DATASET WITH RICH TEXTUAL EXPRESSIVENESS ANNOTATIONS](https://ieeexplore.ieee.org/document/10446023)
 
 StoryTTS is a highly expressive text-to-speech dataset that contains rich expressiveness both in acoustic and textual perspective, from the recording of a Mandarin storytelling show (评书), which is delivered by a female artist, Lian Liru(连丽如). It contains 61 hours of consecutive and highly prosodic speech equipped with accurate text transcriptions and rich textual expressiveness annotations.
 
-example: *李老将军带头往前冲，兵将往前高声呐喊：“杀啊啊啊啊!”*
-<audio controls>
-  <source src="./sample/LianLiru-ZSDFS-episode55-seg055.wav" type="audio/mpeg">
-</audio>
+[Demos](goarsenal.github.io/StoryTTS/)
 
 
-### Dataset Statistics
+## Dataset Statistics
 
-<img src="figures/table1.png" alt="table1" style="zoom:30%;" />
+<img src="figures/table1.png" alt="table1" style="width: 50%;" />
 
-<img src="figures/table2.png" alt="table2" style="zoom:30%;" />
+<img src="figures/table2.png" alt="table2" style="width: 50%;" />
 
-### Download
+## Download
 
 * [Google Drive (5.06 GB)](https://drive.google.com/file/d/1KuD-6c2yxLqPhNJHCaE1jIee-8TjjsB6/view?usp=drive_link)
 
-  #### Note
+  ### Note
 
   * The dataset is **ONLY** for research purposes.
   * Downloading this dataset defaults to agreeing to sign our licensing agreement. lt's important to note that these materials may be removed at any time upon request from the original owner.
 
-### File Description
+## File Description
 
 * `text/transcript` : The transcripts of StoryTTS (**WIP**)
 * `text/label` : The annotation labels of StoryTTS (**WIP**)
@@ -33,7 +30,7 @@ example: *李老将军带头往前冲，兵将往前高声呐喊：“杀啊啊�
 * `text/prompt_gpt4`: Prompt and instruction for GPT4
 * `text/wav.scp`: Path of wav files
 
-### Citation
+## Citation
 
 ```
 @inproceedings{storytts,

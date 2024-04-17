@@ -24,8 +24,8 @@ StoryTTS is a highly expressive text-to-speech dataset that contains rich expres
 
 ## File Description
 
-* `text/transcript` : The transcripts of StoryTTS (**WIP**)
-* `text/label` : The annotation labels of StoryTTS (**WIP**)
+* `text/transcript` : The transcripts of StoryTTS
+* `text/label` : The annotation labels of StoryTTS
 * `text/prompt_claude2`: Prompt and instruction for Claude2 
 * `text/prompt_gpt4`: Prompt and instruction for GPT4
 * `text/wav.scp`: Path of wav files

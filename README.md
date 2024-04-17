@@ -5,16 +5,16 @@
 StoryTTS is a highly expressive text-to-speech dataset that contains rich expressiveness both in acoustic and textual perspective, from the recording of a Mandarin storytelling show (评书), which is delivered by a female artist, Lian Liru(连丽如). It contains 61 hours of consecutive and highly prosodic speech equipped with accurate text transcriptions and rich textual expressiveness annotations.
 
 example: *李老将军带头往前冲，兵将往前高声呐喊：“杀啊啊啊啊!”*
-
-<audio src="./sample/LianLiru-ZSDFS-episode55-seg055.wav"></audio>
-
+<audio controls>
+  <source src="./sample/LianLiru-ZSDFS-episode55-seg055.wav" type="audio/mpeg">
+</audio>
 
 
 ### Dataset Statistics
 
-<img src="figures/table1.png" alt="table1" style="zoom:50%;" />
+<img src="figures/table1.png" alt="table1" style="zoom:30%;" />
 
-<img src="figures/table2.png" alt="table2" style="zoom:50%;" />
+<img src="figures/table2.png" alt="table2" style="zoom:30%;" />
 
 ### Download
 

@@ -20,7 +20,7 @@ StoryTTS is a highly expressive text-to-speech dataset that contains rich expres
   ### Note
 
   * The dataset is **ONLY** for research purposes.
-  * Downloading this dataset defaults to agreeing to sign our licensing agreement. lt's important to note that these materials may be removed at any time upon request from the original owner.
+  * The ownership of the speech data remains with the original owner. Downloading this dataset defaults to agreeing to sign our [licensing agreement](storytts_license_agreement.pdf). lt's important to note that these materials may be removed at any time upon request from the original owner.
 
 ## File Description
 

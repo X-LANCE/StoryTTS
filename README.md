@@ -15,7 +15,7 @@ StoryTTS is a highly expressive text-to-speech dataset that contains rich expres
 
 ## Download
 
-* [Google Drive (5.06 GB)](https://drive.google.com/file/d/1KuD-6c2yxLqPhNJHCaE1jIee-8TjjsB6/view?usp=drive_link)
+* Please download the speech data from [Google Drive (5.06 GB)](https://drive.google.com/file/d/1KuD-6c2yxLqPhNJHCaE1jIee-8TjjsB6/view?usp=drive_link)
 
   ### Note
 
@@ -24,11 +24,23 @@ StoryTTS is a highly expressive text-to-speech dataset that contains rich expres
 
 ## File Description
 
-* `text/transcript` : The transcripts of StoryTTS
-* `text/label` : The annotation labels of StoryTTS
-* `text/prompt_claude2`: Prompt and instruction for Claude2 
-* `text/prompt_gpt4`: Prompt and instruction for GPT4
-* `text/wav.scp`: Path of wav files
+* `dataset/transcript` : The transcripts of StoryTTS in simplified Chinese with puncuations.
+
+* `dataset/utt2dur`: The duration (in seconds) of each utterance.
+
+* `dataset/utt2spk`: The speaker name of each utterance, i.e. the name of the only speaker in StoryTTS.
+
+* `dataset/label` : The annotation labels of StoryTTS. Note: currently labels for some utterances are missing, and will be complemented very soon. The format of this file is as follows:
+
+  ```
+  utt-ID 句式(Sentence Pattern)|修辞手法(Rhetoric Device)|场景(Scene)|情感色彩(Emotional colors)|模仿人物(Imitated Characters)
+  ```
+
+* `dataset/prompt_claude2`: Prompt and instruction for Claude2.
+
+* `dataset/prompt_gpt4`: Prompt and instruction for GPT4.
+
+* `dataset/wav.scp`: Path of wav files. Note: might be changed according to your location of storing the speech data.
 
 ## Citation
 

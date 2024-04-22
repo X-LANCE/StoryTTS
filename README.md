@@ -30,7 +30,7 @@ StoryTTS is a highly expressive text-to-speech dataset that contains rich expres
 
 * `dataset/utt2spk`: The speaker name of each utterance, i.e. the name of the only speaker in StoryTTS.
 
-* `dataset/label` : The annotation labels of StoryTTS. Note: currently labels for some utterances are missing, and will be complemented very soon. The format of this file is as follows:
+* `dataset/label` : The annotation labels of StoryTTS. The format of this file is as follows:
 
   ```
   utt-ID 句式(Sentence Pattern)|修辞手法(Rhetoric Device)|场景(Scene)|情感色彩(Emotional colors)|模仿人物(Imitated Characters)

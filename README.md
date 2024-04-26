@@ -15,7 +15,7 @@ StoryTTS is a highly expressive text-to-speech dataset that contains rich expres
 
 ## Download
 
-* Please download the speech data from [Google Drive (5.06 GB)](https://drive.google.com/file/d/1KuD-6c2yxLqPhNJHCaE1jIee-8TjjsB6/view?usp=drive_link)
+* Please download the speech data from [Google Drive (5.06 GB)](https://drive.google.com/file/d/1KuD-6c2yxLqPhNJHCaE1jIee-8TjjsB6/view?usp=drive_link) or [百度云盘(提取码：u79a)](https://pan.baidu.com/s/1hKc1hKUcEfnnVZYRLDyYwA?pwd=u79a)
 
   ### Note
 

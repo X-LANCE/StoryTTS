@@ -15,7 +15,7 @@ StoryTTS is a highly expressive text-to-speech dataset that contains rich expres
 
 ## Download
 
-* Please download the speech data from [Google Drive (5.06 GB)](https://drive.google.com/file/d/1KuD-6c2yxLqPhNJHCaE1jIee-8TjjsB6/view?usp=drive_link) or [ModelScope](https://modelscope.cn/api/v1/datasets/CantabileKwok/StoryTTS/repo?Revision=master&FilePath=StoryTTS.zip)
+* Please download the speech data from [Huggingface](https://huggingface.co/datasets/Arsenal/StoryTTS) or [ModelScope](https://modelscope.cn/api/v1/datasets/CantabileKwok/StoryTTS/repo?Revision=master&FilePath=StoryTTS.zip)
 
   ### Note
 
